@@ -1,6 +1,15 @@
 {
   "name": "frontend",
-  "proxy": "https://twpmernecom-backend.onrender.com/",
+  "proxy":{
+   "/api/*":{
+   "target":"https://twpmernecom-backend.onrender.com/",
+   "secure":false,
+   "headers": {
+     "host": "twpmernecom-backend.onrender.com"
+    },
+    "cookieDomainRewrite": ""
+  }
+ }
   "version": "0.1.0",
   "private": true,
   "dependencies": {
